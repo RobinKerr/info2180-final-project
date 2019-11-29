@@ -35,6 +35,16 @@ body{
     border-radius: 4px;
 }
 
+#log{
+    border: none;
+    background-color: rgb(43, 121, 255);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -68,6 +78,10 @@ a{
 
 .pageColor{
 	background-color: #F2FBEF;
+}
+
+#descript{
+    min-height: 100px;
 }
 
 .Home, .AddUser, .NewIssue, .Logout{

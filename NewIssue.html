@@ -10,7 +10,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<title>Add User</title>
+		<title>New Issue</title>
 
 		<link rel="stylesheet" href="style.css" />
 
@@ -54,7 +54,7 @@
 				    </div>
                 </a>
                 
-				<a href="Logout.html">
+				<a href="index.html">
                     <div class="Logout hover">
                         <p>
 					       <img src="logout.png" class="sidecon"/>Logout
@@ -67,6 +67,39 @@
             <!--main content area-->
 			<div class="mainContent">
                 
+                <h1>Create Issue</h1>
+                
+                <form>
+                    <p>Title</p>
+                    <input id="title" type="text" class="addput" required="required"/>
+                    
+                    <p>Description</p>
+                    <textarea id="description" type="textarea" class="addput" required="required"></textarea>
+                    
+                    <p>Assigned To</p>
+                    <select id="users" class="addput">
+                        <option>Joe Grine</option>
+                        <!--options based on users in database-->
+                    </select>
+                    
+                    <p>Type</p>
+                    <select id="types" class="addput">
+                        <option>Bug</option>
+                        <!--options based on bugs in database-->
+                    </select>
+                    
+                    <p>Priority</p>
+                    <select id="priorities" class="addput">
+                        <option>Major</option>
+                        <!--option based on priorities in database-->
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <button type="submit" id="sub">Submit</button>
+                    
+                    
+                </form>
                 
 			</div>
 		</div>

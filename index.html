@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>Login Page</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script src=""></script>
+
+	</head>
+
+	<body>
+		<div class="bod">
+            
+            <!--green header-->
+			<header>
+                <img src="bug.png" class="bugcon"/>
+				<h2>BugMe Issue Tracker</h2>
+			</header>
+
+            <!--side bar navigation-->
+			<div class="sidebar">
+                
+				<a>
+                    <div class="Home hover">
+                        <p>
+					       <img src="house.png" class="sidecon"/>Home
+                        </p>
+				    </div>
+                </a>
+				
+                <a>
+                    <div class="AddUser hover">
+                        <p>
+					       <img src="adduser.png" class="sidecon"/>Add User
+                        </p>
+				    </div>
+                </a>
+				
+                <a>
+                    <div class="NewIssue hover">
+                        <p>
+					       <img src="newIssue.png" class="sidecon"/>New Issue
+                        </p>
+				    </div>
+                </a>
+                
+				<a>
+                    <div class="Logout hover">
+                        <p>
+					       <img src="logout.png" class="sidecon"/>Logout
+                        </p>
+				    </div>
+                </a>
+                
+			</div>
+
+            <!--main content area-->
+			<div class="mainContent">
+                
+                <h1>Login</h1>
+                
+                <!--check for user validity-->
+                <form>
+                    <p>Username</p>
+                    <input id="username" type="text" class="addput" required="required"/>
+                    
+                    <p>Password</p>
+                    <input id="pass" type="password" class="addput" required="required"/>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    <button type="submit" id="log">Login</button>
+                       
+                </form>
+                
+			</div>
+		</div>
+	</body>
+
+</html>
