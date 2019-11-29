@@ -19,27 +19,72 @@
 	</head>
 
 	<body>
-		<div class="grid">
+		<div class="bod">
+            
+            <!--green header-->
 			<header>
-				<h1>BugMe Issue Tracker</h1>
+                <img src="bug.png" class="bugcon"/>
+				<h2>BugMe Issue Tracker</h2>
 			</header>
 
+            <!--side bar navigation-->
 			<div class="sidebar">
-				<div class="Home hover">
-					<a href="Home.html">Home</a>
-				</div>
-				<div class="AddUser pageColor">
-					<a>Add User</a>
-				</div>
-				<div class="NewIssue hover">
-					<a href="NewIssue.html">New Issue</a>
-				</div>
-				<div class="Logout hover">
-					<a href="Logout.html">Logout</a>
-				</div>
+                
+				<a href="Home.html">
+                    <div class="Home hover">
+                        <p>
+					       <img src="house.png" class="sidecon"/>Home
+                        </p>
+				    </div>
+                </a>
+				
+                <a>
+                    <div class="AddUser pageColor">
+                        <p>
+					       <img src="adduser.png" class="sidecon"/>Add User
+                        </p>
+				    </div>
+                </a>
+				
+                <a href="NewIssue.html">
+                    <div class="NewIssue hover">
+                        <p>
+					       <img src="newIssue.png" class="sidecon"/>New Issue
+                        </p>
+				    </div>
+                </a>
+                
+				<a href="Logout.html">
+                    <div class="Logout hover">
+                        <p>
+					       <img src="logout.png" class="sidecon"/>Logout
+                        </p>
+				    </div>
+                </a>
+                
 			</div>
 
+            <!--main content area-->
 			<div class="mainContent">
+                
+                <h1>New User</h1>
+                <form>
+                    <p>FirstName</p>
+                    <input type="text" id="fname" class="addput" required="required">
+
+                    <p>LastName</p>
+                    <input type="text" id="lname" class="addput" required="required">
+
+                    <p>Password</p>
+                    <input type="text" id="pass" class="addput" required="required">
+
+                    <p>Email</p>
+                    <input type="text" id="mail" class="addput" required="required">
+                    <br>
+                    <br>
+                    <br>
+                    <button type="submit" id="sub">Submit</button>
+                </form>
 			</div>
 		</div>
 	</body>

@@ -1,32 +1,69 @@
 body{
 	margin: 0;
-	font-family: sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    
 }
+
+.addput{
+    border: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    min-width: 300px;
+    padding: 5px;
+}
+
 .grid{
 	display: grid;
-    	height: auto;
-    	width: auto;
-    	grid-template: 50px 1fr 1fr 1fr/ 20% 1fr 1fr 1fr;
+    height: auto;
+    width: auto;
+}
+
+.bugcon{
+    width: 29px;
+    display: inline;
+    position: absolute;
+}
+
+#sub{
+    border: none;
+    background-color: rgb(43, 121, 255);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
 }
 
 header{
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: center;
-    	align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 	grid-column: 1 / span 4;
 	padding-left: 35px;
 	color: white;
 	background-color: #013F34;
 }
 
+header h2{
+    padding-left: 45px; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 .sidebar{
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: center;
-    	align-items: center;
-	grid-row: 2 / span 3;
+    justify-content: center;
+    align-items: center;
 	background-color: #D2E4D1;
+    min-width: 200px;
+    float: left;
+    min-height: 90vh;
+    padding-top: 20px
 }
 
 .pageColor{
@@ -34,14 +71,23 @@ header{
 }
 
 .Home, .AddUser, .NewIssue, .Logout{
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: center;
-    	align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 20%;
 	width: 80%;
+}
+
+.sidecon{
+    width: 14px;
+    padding-right: 5px;
+}
+
+.sidebar p{
+    margin: 0px;
 }
 
 @keyframes transition {
@@ -56,10 +102,10 @@ header{
 }
 
 .mainContent{
-	display: grid;
-    	height: inherit;
-    	width: inherit;
-    	grid-row: 2 / span 3;
-    	grid-column: 2 / span 3;
+    height: inherit;
+	width: inherit;
 	background-color: #F2FBEF;
+    padding-left: 25px;
+    overflow: hidden;
+    min-height: 91vh;
 }
