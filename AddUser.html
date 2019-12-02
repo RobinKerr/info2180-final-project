@@ -11,11 +11,9 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
 		<title>Add User</title>
+			
 
 		<link rel="stylesheet" href="style.css" />
-
-		<script src=""></script>
-
 	</head>
 
 	<body>
@@ -68,25 +66,31 @@
 			<div class="mainContent">
                 
                 <h1>New User</h1>
-                <form>
+                <form action= "index.php" method="POST">
                     <p>FirstName</p>
-                    <input type="text" id="fname" class="addput" required="required">
+                    <input type="text" id="fname" name="firstname" class="addput" required="required">
 
                     <p>LastName</p>
-                    <input type="text" id="lname" class="addput" required="required">
+                    <input type="text" id="lname" name="lastname" class="addput" required="required">
 
                     <p>Password</p>
-                    <input type="text" id="pass" class="addput" required="required">
+                    <input type="password" id="pass" name="password" class="addput" required="required">
 
                     <p>Email</p>
-                    <input type="text" id="mail" class="addput" required="required">
+                    <input type="text" id="mail" name="email" class="addput" required="required">
+                     <input type="hidden"name="add" value = "all">
+                    
                     <br>
                     <br>
                     <br>
-                    <button type="submit" id="sub">Submit</button>
+                    <button type="submit" class="sub" id="sub" name = "submit" onclick="validate()">Submit</button>
                 </form>
+			</div>
+			<div id="status">
+			    
 			</div>
 		</div>
 	</body>
+<script src="index.js"></script>
 
 </html>

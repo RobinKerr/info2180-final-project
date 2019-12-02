@@ -13,12 +13,9 @@
 		<title>New Issue</title>
 
 		<link rel="stylesheet" href="style.css" />
-
-		<script src=""></script>
-
 	</head>
 
-	<body>
+	<body id="issue">
 		<div class="bod">
             
             <!--green header-->
@@ -69,40 +66,44 @@
                 
                 <h1>Create Issue</h1>
                 
-                <form>
+                <form action="index.php" method="GET">
+                     <input type="hidden" name="hidden" value="addissue">
                     <p>Title</p>
-                    <input id="title" type="text" class="addput" required="required"/>
+                    <input id="title" type="text" name="title"class="addput" required="required"/>
                     
                     <p>Description</p>
-                    <textarea id="description" type="textarea" class="addput" required="required"></textarea>
+                    <textarea id="description" name="text" type="textarea" class="addput" required="required"></textarea>
                     
                     <p>Assigned To</p>
-                    <select id="users" class="addput">
-                        <option>Joe Grine</option>
+                    <select id="users" name="user" class="addput">
+                       <!-- <option>Joe Grine</option>
                         <!--options based on users in database-->
                     </select>
                     
                     <p>Type</p>
-                    <select id="types" class="addput">
+                    <select id="types" name="type"class="addput">
                         <option>Bug</option>
-                        <!--options based on bugs in database-->
+                        <option>Proposal</option>
+                        <option>Task</option>
                     </select>
                     
                     <p>Priority</p>
-                    <select id="priorities" class="addput">
+                    <select id="priorities" name="priority" class="addput">
+                        <option>Minor</option>
                         <option>Major</option>
-                        <!--option based on priorities in database-->
+                        <option>Critical</option>
                     </select>
                     <br>
                     <br>
                     <br>
-                    <button type="submit" id="sub">Submit</button>
+                    <button type="submit" id="sub" class="sub">Submit</button>
                     
                     
                 </form>
-                
 			</div>
 		</div>
+		<div id="status"></div>
 	</body>
+		<script src="issue.js"></script>
 
 </html>

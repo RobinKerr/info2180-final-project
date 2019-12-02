@@ -14,7 +14,7 @@
 
 		<link rel="stylesheet" href="style.css" />
 
-		<script src=""></script>
+		<script src="home.js"></script>
 
 	</head>
 
@@ -23,8 +23,10 @@
             
             <!--green header-->
 			<header>
+			
                 <img src="bug.png" class="bugcon"/>
 				<h2>BugMe Issue Tracker</h2>
+				
 			</header>
 
             <!--side bar navigation-->
@@ -66,7 +68,19 @@
 
             <!--main content area-->
 			<div class="mainContent">
+                <div>
+                	<h1>
+                	<b>	Issues</b>
+                	</h1>
+                	<br>
                 
+                	<h3>
+                		<b>Filtered by: <button id="bth1" class="sub2" onclick="Allissues()">ALL</button>&emsp; <button id="bth2" class="sub2" onclick="listopen()">OPEN</button>&emsp;<button id="bth3" class="sub2" onclick="listmyticket()">MY TICKET</button></b>
+                	</h3>
+                </div>
+                <div id="active">
+                	
+                </div>
                 
 			</div>
 		</div>

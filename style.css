@@ -25,7 +25,7 @@ body{
     position: absolute;
 }
 
-#sub{
+.sub{
     border: none;
     background-color: rgb(43, 121, 255);
     color: white;
@@ -122,4 +122,43 @@ a{
     padding-left: 25px;
     overflow: hidden;
     min-height: 91vh;
+}
+
+
+
+.sub2{
+    border: none;
+    background-color: #F2FBEF;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
+}
+.sub2:hover
+{
+    border: none;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
