@@ -65,10 +65,12 @@ if($_GET["get"]=="list")
 
 if($_GET["hidden"]=="addissue")
 {
-  echo "here1";
+ 
      $conn -> query("INSERT INTO Issues (title, description, type, priority, status, assigned_to,created_by,created,updated) 
-       VALUES('$title', '$text', '$type', '$priority', 'Open', '$user','Admin','$date','$date')");    
-      echo "here2";
+       VALUES('$title', '$text', '$type', '$priority', 'Open', '$user','Admin','$date','$date')");   
+       
+       header('Location: NewIssue.html');
+    
 }
 
 
@@ -77,12 +79,6 @@ if($_GET["get"]=="all")
 {
     $sql = $conn ->query("SELECT * FROM Issues");    
     $results = $sql->fetchAll(PDO::FETCH_ASSOC);
-    
-    foreach ($results as $result)
-    {
-      
-      
-      {
         ?>
         <table>
         <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
@@ -105,26 +101,70 @@ if($_GET["get"]=="all")
         
         <?php
         }
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    }
-}
+    
 
+
+
+
+
+
+
+
+
+
+if($_GET["get"]=="open")
+{
+    $sql = $conn ->query("SELECT * FROM Issues where status='open'");    
+    $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+    
+        ?>
+        <table>
+        <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
+        <?php
+        foreach($results as $result)
+        {
+       ?>
+         <td><?php echo $result['id'].$result['title'];?></td>
+         <td><?php echo $result['type'];?></td>
+          <td><?php echo $result['status'];?></td>
+         <td><?php echo $result['assigned_to'];?></td>
+          <td><?php echo $result['created'];?></td>
+         </tr>
+        <?php
+        }
+        ?>
+        </table>
+        <br>
+        <br>
+        
+        <?php
+}
+if($_GET["get"]=="listmyticket")
+{
+    $sql = $conn ->query("SELECT * FROM Issues where created_by='Admin'");    
+    $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+        <table>
+        <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
+        <?php
+        foreach($results as $result)
+        {
+       ?>
+         <td><?php echo $result['id'].$result['title'];?></td>
+         <td><?php echo $result['type'];?></td>
+          <td><?php echo $result['status'];?></td>
+         <td><?php echo $result['assigned_to'];?></td>
+          <td><?php echo $result['created'];?></td>
+         </tr>
+        <?php
+        }
+        ?>
+        </table>
+        <br>
+        <br>
+        
+        <?php
+}
 
 
 

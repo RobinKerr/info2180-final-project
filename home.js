@@ -61,7 +61,7 @@ function listopen(){
 
 function listmyticket(){
     const xhr = new XMLHttpRequest (); 
-    const url = 'index.php?get=all'; //Url to server
+    const url = 'index.php?get=listmyticket'; //Url to server
     xhr.onreadystatechange = dosomething;
     function dosomething (){
         if (xhr.readyState === 4){
