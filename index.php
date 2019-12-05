@@ -86,7 +86,7 @@ if($_GET["get"]=="all")
         foreach($results as $result)
         {
        ?>
-         <td><?php echo $result['id'].$result['title'];?></td>
+          <td style="color: blue"; <a href="NewIssue.html"><?php echo $result['id'].$result['title'];?></a></td>
          <td><?php echo $result['type'];?></td>
           <td><?php echo $result['status'];?></td>
          <td><?php echo $result['assigned_to'];?></td>
@@ -124,7 +124,7 @@ if($_GET["get"]=="open")
         foreach($results as $result)
         {
        ?>
-         <td><?php echo $result['id'].$result['title'];?></td>
+          <td style="color: blue"; <a href="NewIssue.html"><?php echo $result['id'].$result['title'];?></a></td>
          <td><?php echo $result['type'];?></td>
           <td><?php echo $result['status'];?></td>
          <td><?php echo $result['assigned_to'];?></td>
@@ -150,7 +150,7 @@ if($_GET["get"]=="listmyticket")
         foreach($results as $result)
         {
        ?>
-         <td><?php echo $result['id'].$result['title'];?></td>
+          <td style="color: blue"; <a href="NewIssue.html"><?php echo $result['id'].$result['title'];?></a></td>
          <td><?php echo $result['type'];?></td>
           <td><?php echo $result['status'];?></td>
          <td><?php echo $result['assigned_to'];?></td>
