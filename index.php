@@ -168,7 +168,33 @@ if($_GET["get"]=="listmyticket")
 
 
 
+################################################################################################
 
+
+
+
+$login=$_POST["hide"];
+    if($login== "123AC")
+    {
+      
+      $loginpassword = $_POST['password']; 
+      $loginusername =$_POST['email'];
+      
+      $stmt22 = $conn->query("SELECT * FROM Users WHERE email = '$loginusername'");
+      $passwordresult = $stmt22->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($passwordresult as $rows)
+      {
+         
+          if($rows['hash'] ==  md5( $rows['salt'].$loginpassword ))
+          {
+                return header('Location: Home.html');
+          }
+      }
+             header('Location: index.html');    
+        
+      
+      
+    }
 
 
 

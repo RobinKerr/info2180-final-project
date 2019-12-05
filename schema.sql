@@ -14,7 +14,7 @@ CREATE TABLE Users (`id` INT (11) AUTO_INCREMENT PRIMARY KEY, `firstname` VARCHA
   
 INSERT INTO Users (
 firstname,lastname, hash, email, date, salt)
-VALUES('Raldon', 'Baxter', MD5(CONCAT('12345', 'password123')), 'admin@bugme.com', '2019-11-29', 12345);
+VALUES('Raldon', 'Baxter', '47fe5b69916f46e0d6909b9bdc196167', 'admin@bugme.com', '2019-11-29', 12345);
 
 CREATE TABLE Issues (`id` INT (11) AUTO_INCREMENT PRIMARY KEY,
 `title` VARCHAR (135) NOT NULL default '',

@@ -70,12 +70,13 @@
                 <h1>Login</h1>
                 
                 <!--check for user validity-->
-                <form>
+                <form action="index.php" method="POST">
                     <p>Username</p>
-                    <input id="username" type="text" class="addput" required="required"/>
+                    <input id="username" type="text" name="email" class="addput" required="required"/>
                     
                     <p>Password</p>
-                    <input id="pass" type="password" class="addput" required="required"/>
+                    <input id="pass" type="password" name="password" class="addput" required="required"/>
+                    <input id="hide" type="hidden" name="hide" value="123AC"/>
                     
                     <br>
                     <br>
