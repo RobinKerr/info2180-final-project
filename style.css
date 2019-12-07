@@ -35,6 +35,16 @@ body{
     border-radius: 4px;
 }
 
+.subgreen{
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
+}
+
 #log{
     border: none;
     background-color: rgb(43, 121, 255);
@@ -151,20 +161,21 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+    border-left: none;
+  border-right: none;
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 15px;
+    border-left: none;
+  border-right: none;
 }
 
 
 
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 
 
 
@@ -213,7 +224,14 @@ tr:nth-child(even) {
 }
 
 
-
+.newis
+{
+      top: 100px;
+      right:50px;
+      position: absolute;
+      z-index: 1;
+    
+}
 
 
 
