@@ -37,6 +37,12 @@ $priority=$_GET["priority"];
 
 
 
+$title  = preg_replace('/[^a-zA-Z0-9_ -]/s','',$title);
+$text  = preg_replace('/[^a-zA-Z0-9_ -]/s','',$text);
+
+
+
+
 
 
 
@@ -67,7 +73,7 @@ if($_GET["hidden"]=="addissue")
 {
  
      $conn -> query("INSERT INTO Issues (title, description, type, priority, status, assigned_to,created_by,created,updated) 
-       VALUES('$title', '$text', '$type', '$priority', 'IN PROGRESS', '$user','Admin','$date','$date')");   
+       VALUES('$title', '$text', '$type', '$priority', 'OPEN', '$user','Admin','$date','$date')");   
        
        header('Location: NewIssue.html');
     
@@ -88,7 +94,7 @@ if($_GET["get"]=="all")
         foreach($results as $result)
         {
        ?>
-           <td> <?php echo"#".$result['id']?> <a href="index.html" class="link"> <?php echo $result['title'];?> </a> </td>
+           <td> <?php echo"#".$result['id']?> <a href="DisplayIssue.html" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
          <?php
         if($result['status']=="OPEN")
@@ -147,7 +153,7 @@ if($_GET["get"]=="open")
         foreach($results as $result)
         {
        ?>
- <td> <?php echo"#".$result['id']?> <a href="index.html" class="link"> <?php echo $result['title'];?> </a> </td>
+ <td> <?php echo"#".$result['id']?> <a href="DisplayIssue.html" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
  <td class="center"><label class="open"><?php echo $result['status'];?></label></td>
          <td><?php echo $result['assigned_to'];?></td>
@@ -173,7 +179,7 @@ if($_GET["get"]=="listmyticket")
         foreach($results as $result)
         {
        ?>
-                 <td> <?php echo"#".$result['id']?> <a href="index.html" class="link"> <?php echo $result['title'];?> </a> </td>
+                 <td> <?php echo"#".$result['id']?> <a href="DisplayIssue.html" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
          
          
