@@ -166,3 +166,56 @@ tr:nth-child(even) {
 
 
 
+
+
+.open{
+    border: none;
+    background-color: rgb(34,139,34);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.closed{
+    border: none;
+    background-color: rgb(255,0,0);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+
+.inprogress{
+    border: none;
+    background-color: rgb(255,255,0);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.link{
+    color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

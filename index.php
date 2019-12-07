@@ -67,7 +67,7 @@ if($_GET["hidden"]=="addissue")
 {
  
      $conn -> query("INSERT INTO Issues (title, description, type, priority, status, assigned_to,created_by,created,updated) 
-       VALUES('$title', '$text', '$type', '$priority', 'Open', '$user','Admin','$date','$date')");   
+       VALUES('$title', '$text', '$type', '$priority', 'IN PROGRESS', '$user','Admin','$date','$date')");   
        
        header('Location: NewIssue.html');
     
@@ -82,13 +82,36 @@ if($_GET["get"]=="all")
         ?>
         <table>
         <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
+        
         <?php
+        
         foreach($results as $result)
         {
        ?>
-          <td style="color: blue"; <a href="NewIssue.html"><?php echo $result['id'].$result['title'];?></a></td>
+          <td> <a href="index.html" class="link"><?php echo "#".$result['id'].$result['title'];?></a></td>
          <td><?php echo $result['type'];?></td>
-          <td><?php echo $result['status'];?></td>
+         <?php
+        if($result['status']=="OPEN")
+          {
+              ?>
+              <td class="open"><?php echo $result['status'];?></td>
+              <?php
+          }
+         
+          else if($result['status']=="CLOSED")
+          {
+              ?>
+              <td class="closed"><?php echo $result['status'];?></td>
+              <?php
+          }
+          
+        else if($result['status']=="IN PROGRESS")
+          {
+              ?>
+              <td class="inprogress"><?php echo $result['status'];?></td>
+              <?php
+          }
+         ?>
          <td><?php echo $result['assigned_to'];?></td>
           <td><?php echo $result['created'];?></td>
          </tr>
@@ -124,9 +147,9 @@ if($_GET["get"]=="open")
         foreach($results as $result)
         {
        ?>
-          <td style="color: blue"; <a href="NewIssue.html"><?php echo $result['id'].$result['title'];?></a></td>
+                 <td> <a href="index.html" class="link"><?php echo "#".$result['id'].$result['title'];?></a></td>
          <td><?php echo $result['type'];?></td>
-          <td><?php echo $result['status'];?></td>
+          <td class="open"><?php echo $result['status'];?></td>
          <td><?php echo $result['assigned_to'];?></td>
           <td><?php echo $result['created'];?></td>
          </tr>
@@ -150,9 +173,47 @@ if($_GET["get"]=="listmyticket")
         foreach($results as $result)
         {
        ?>
-          <td style="color: blue"; <a href="NewIssue.html"><?php echo $result['id'].$result['title'];?></a></td>
+                   <td> <a href="index.html" class="link"><?php echo "#".$result['id'].$result['title'];?></a></td>
          <td><?php echo $result['type'];?></td>
-          <td><?php echo $result['status'];?></td>
+         
+         
+         
+         
+         
+                  <?php
+         
+         
+        if($result['status']=="OPEN")
+          {
+              ?>
+              <td class="open"><?php echo $result['status'];?></td>
+              <?php
+          }
+         
+          else if($result['status']=="CLOSED")
+          {
+              ?>
+              <td class="closed"><?php echo $result['status'];?></td>
+              <?php
+          }
+          
+        else if($result['status']=="IN PROGRESS")
+          {
+              ?>
+              <td class="inprogress"><?php echo $result['status'];?></td>
+              <?php
+          }
+         ?>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+
          <td><?php echo $result['assigned_to'];?></td>
           <td><?php echo $result['created'];?></td>
          </tr>
