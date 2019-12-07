@@ -32,6 +32,8 @@ $text=$_GET["text"];
 $user=$_GET["user"];
 $type=$_GET["type"];
 $priority=$_GET["priority"];
+$pullup=$_GET["pullup"];
+
 
 
 
@@ -90,11 +92,10 @@ if($_GET["get"]=="all")
         <tr><th><b>Title</b> </th><th><b>Type</b></th><th class="center"><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
         
         <?php
-        
         foreach($results as $result)
         {
        ?>
-           <td> <?php echo"#".$result['id']?> <a href="DisplayIssue.html" class="link"> <?php echo $result['title'];?> </a> </td>
+           <td> <?php echo"#".$result['id']?> <a href="index.php?pullup=<?php echo $result['id'];?>" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
          <?php
         if($result['status']=="OPEN")
@@ -264,6 +265,23 @@ $login=$_POST["hide"];
     }
 
 
+##################################################################################################
+############################# Pullling up the information     ####################################
+
+
+if($pullup>0)
+{
+  $sql = $conn ->query("SELECT * FROM Issues where id='$pullup'");    
+  $results = $sql->fetchAll(PDO::FETCH_ASSOC);   
+  
+  ?>
+  
+  
+  
+  
+  <?php
+}
 
 
 ?>
+
