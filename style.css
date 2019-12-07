@@ -156,8 +156,11 @@ table {
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 15px;
 }
+
+
+
 
 tr:nth-child(even) {
   background-color: #dddddd;
@@ -175,6 +178,7 @@ tr:nth-child(even) {
     font-weight: bold;
     padding: 10px;
     border-radius: 4px;
+    text-align: center;
 }
 
 .closed{
@@ -184,6 +188,7 @@ tr:nth-child(even) {
     font-weight: bold;
     padding: 10px;
     border-radius: 4px;
+    text-align: center;
 }
 
 
@@ -195,12 +200,19 @@ tr:nth-child(even) {
     font-weight: bold;
     padding: 10px;
     border-radius: 4px;
+    text-align: center;
 }
 
 .link{
     color: blue;
   font-family: Arial, Helvetica, sans-serif;
 }
+.center
+{
+    text-align: center;
+}
+
+
 
 
 

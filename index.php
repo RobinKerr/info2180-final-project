@@ -80,35 +80,35 @@ if($_GET["get"]=="all")
     $sql = $conn ->query("SELECT * FROM Issues");    
     $results = $sql->fetchAll(PDO::FETCH_ASSOC);
         ?>
-        <table>
-        <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
+        <table class="table-border">
+        <tr><th><b>Title</b> </th><th><b>Type</b></th><th class="center"><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
         
         <?php
         
         foreach($results as $result)
         {
        ?>
-          <td> <a href="index.html" class="link"><?php echo "#".$result['id'].$result['title'];?></a></td>
+           <td> <?php echo"#".$result['id']?> <a href="index.html" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
          <?php
         if($result['status']=="OPEN")
           {
               ?>
-              <td class="open"><?php echo $result['status'];?></td>
+              <td class="center"><label class="open"><?php echo $result['status'];?></label></td>
               <?php
           }
          
           else if($result['status']=="CLOSED")
           {
               ?>
-              <td class="closed"><?php echo $result['status'];?></td>
+              <td class="center"><label class="closed"><?php echo $result['status'];?></label></td>
               <?php
           }
           
         else if($result['status']=="IN PROGRESS")
           {
               ?>
-              <td class="inprogress"><?php echo $result['status'];?></td>
+              <td class="center"><label class="inprogress"><?php echo $result['status'];?></label></td>
               <?php
           }
          ?>
@@ -142,14 +142,14 @@ if($_GET["get"]=="open")
     
         ?>
         <table>
-        <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
+        <tr><th><b>Title</b> </th><th><b>Type</b></th><th class="center"><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
         <?php
         foreach($results as $result)
         {
        ?>
-                 <td> <a href="index.html" class="link"><?php echo "#".$result['id'].$result['title'];?></a></td>
+ <td> <?php echo"#".$result['id']?> <a href="index.html" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
-          <td class="open"><?php echo $result['status'];?></td>
+ <td class="center"><label class="open"><?php echo $result['status'];?></label></td>
          <td><?php echo $result['assigned_to'];?></td>
           <td><?php echo $result['created'];?></td>
          </tr>
@@ -168,12 +168,12 @@ if($_GET["get"]=="listmyticket")
     $results = $sql->fetchAll(PDO::FETCH_ASSOC);
         ?>
         <table>
-        <tr><th><b>Title</b> </th><th><b>Type</b></th><th><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
+        <tr><th><b>Title</b> </th><th><b>Type</b></th><th class="center"><b>Status</b></th><th><b>Assign To</b></th><th><b>Created</b> </th> </tr>
         <?php
         foreach($results as $result)
         {
        ?>
-                   <td> <a href="index.html" class="link"><?php echo "#".$result['id'].$result['title'];?></a></td>
+                 <td> <?php echo"#".$result['id']?> <a href="index.html" class="link"> <?php echo $result['title'];?> </a> </td>
          <td><?php echo $result['type'];?></td>
          
          
@@ -186,21 +186,21 @@ if($_GET["get"]=="listmyticket")
         if($result['status']=="OPEN")
           {
               ?>
-              <td class="open"><?php echo $result['status'];?></td>
+              <td class="center"><label class="open"><?php echo $result['status'];?></label></td>
               <?php
           }
          
           else if($result['status']=="CLOSED")
           {
               ?>
-              <td class="closed"><?php echo $result['status'];?></td>
+              <td class="center"><label class="closed"><?php echo $result['status'];?></label></td>
               <?php
           }
           
         else if($result['status']=="IN PROGRESS")
           {
               ?>
-              <td class="inprogress"><?php echo $result['status'];?></td>
+              <td class="center"><label class="inprogress"><?php echo $result['status'];?></label></td>
               <?php
           }
          ?>
