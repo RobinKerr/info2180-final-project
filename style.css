@@ -236,25 +236,6 @@ td, th {
 
 
 
-.mrkclosed
-{
-     bottom: 70px;
-      right:50px;
-      position: absolute;
-      z-index: 1;
-}
-
-
-.subgray{
-    justify-content: center;
-    align-items: center;
-	background-color: rgb(208,208,208);
-    min-width: 200px;
-    float: right;
-    min-height: 50vh;
-    border-color: white;
-
-}
 
 
 
