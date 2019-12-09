@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
-    
+    min-width: 980px;
 }
 
 .addput{
@@ -12,6 +12,90 @@ body{
     min-width: 300px;
     padding: 5px;
 }
+
+/*Issue description styles start*/
+#issueNum{
+    margin-top: 0px;
+}
+
+#issueTitle{
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+#issueDesc{
+    font-weight: normal;
+}
+
+#updateList{
+    font-weight: normal;
+    list-style-image: url(listIcon.png)
+}
+
+.fontOpacity{
+    opacity: 0.5;
+}
+
+.descArea{
+    float: left;
+    width: 1000px;
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 1500px) {
+    .rightPanel{
+        clear: both;
+    }
+    
+    .descArea{
+        width: auto;
+    }
+}
+
+/*panel styles*/
+.rightPanel{
+    margin-top: 35px;
+    text-align: center;
+    overflow: hidden;
+    max-width: 250px;
+}
+
+.info{
+    opacity: 0.5;
+    font-weight: normal;
+}
+
+.specsArea{
+    border: solid;
+    border-width: 1.4px;
+    border-color: rgb(180, 190, 180);
+    padding: 15px;
+    text-align: left;
+    background-color: rgb(215, 224, 224);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.issueButton{
+    border: none;
+    padding: 10px;
+    min-width: 100%;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#closed{
+    background-color: rgb(27, 129, 224);
+}
+
+#progress{
+    background-color: rgb(4, 184, 61);
+}
+
+/*DESCRIPTION END*/
+
 
 .grid{
 	display: grid;
