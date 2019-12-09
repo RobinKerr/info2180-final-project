@@ -25,5 +25,5 @@ CREATE TABLE Issues (`id` INT (11) AUTO_INCREMENT PRIMARY KEY,
 `assigned_to` CHAR (40) NOT NULL default '',
 `created_by` CHAR (40) NOT NULL default '',
 `created` DATE,
-`updated` DATE);
+`updated` CHAR (60) NOT NULL default '');
 

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>Home</title>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<script src="home.js"></script>
+
+	</head>
+
+	<body>
+		<div class="bod">
+            
+            <!--green header-->
+			<header>
+			
+                <img src="bug.png" class="bugcon"/>
+				<h2>BugMe Issue Tracker</h2>
+				
+			</header>
+
+            <!--side bar navigation-->
+			<div class="sidebar">
+                
+				<a>
+                    <div class="Home pageColor">
+                        <p>
+					       <img src="house.png" class="sidecon"/>Home
+                        </p>
+				    </div>
+                </a>
+				
+                <a href="AddUser.html">
+                    <div class="AddUser hover">
+                        <p>
+					       <img src="adduser.png" class="sidecon"/>Add User
+                        </p>
+				    </div>
+                </a>
+				
+                <a href="NewIssue.html">
+                    <div class="NewIssue hover">
+                        <p>
+					       <img src="newIssue.png" class="sidecon"/>New Issue
+                        </p>
+				    </div>
+                </a>
+                
+				<a href="index.html">
+                    <div class="Logout hover">
+                        <p>
+					       <img src="logout.png" class="sidecon"/>Logout
+                        </p>
+				    </div>
+                </a>
+                
+			</div>
+
+            <!--main content area-->
+			<div class="mainContent">
+                
+                <!--title div for the issue-->
+                <div class="title">
+                    <h1 id="issueTitle">Bug Ina Mi Rass</h1>
+                    <h5 id="issueNum">Issue #0012</h5>
+                </div>
+                
+                <!--description div for the issue-->
+                <div class="descArea">
+                    
+                    <!--paragraph for description-->
+                    <p id="issueDesc">
+                        When an issue is clicked it will open and show the full details of the Issue (See Figure
+4). These details should include the Title, Description, Type, Priority, Status, Date
+Created and by whom, Date last updated, as well as who it is assigned to. There should
+also be a button to Close the ticket that when clicked will update the ticket status to be
+"Closed" and another button that when clicked will mark the ticket as "In Progress".
+Whenever either of these buttons are clicked they should also update the "updated" 
+date column for the issue with the current date and time when the respective button is
+clicked.
+                    </p>
+                    <br/>
+                    
+                    <!--unordered list for updates-->
+                    <ul id="updateList">
+                        <li><p class="fontOpacity">Something changed in the bug. It grew wings!</p></li>
+                        
+                        <li><p class="fontOpacity">Bug just done beat up Odano!! Call the Police!!</p></li>
+                    </ul>
+                    
+                </div>
+                
+                
+                <!--Right side panel with Issue Specs-->
+                <div class="rightPanel">
+                    
+                    <!--content area-->
+                    <div class="specsArea">
+                        
+                        <label>Assigned To:</label>
+                        <br/>
+                        <label id="assigned" class="info">Someone</label>
+                        <br/><br/>
+                        
+                        <label>Type:</label>
+                        <br/>
+                        <label id="type" class="info">Proposal</label>
+                        <br/><br/>
+                        
+                        <label>Priority:</label>
+                        <br/>
+                        <label id="priority" class="info">High like Snoop Dogg</label>
+                        <br/><br/>
+                        
+                        <label>Status:</label>
+                        <br/>
+                        <label id="status" class="info">Open</label>
+                        <br/><br/>
+                        
+                    </div>
+                    
+                    <button type="button" id="closed" class="issueButton">Mark as Closed</button>
+                    
+                    <button type="button" id="progress" class="issueButton">Mark in Progress</button>
+                    
+                </div>
+                
+			</div>
+		</div>
+	</body>
+
+</html>
